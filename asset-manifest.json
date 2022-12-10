@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/kaginadle/static/css/main.132e3ece.css",
-    "main.js": "/kaginadle/static/js/main.cdd2c753.js",
+    "main.css": "/kaginadle/static/css/main.b0c912e3.css",
+    "main.js": "/kaginadle/static/js/main.a21d5c16.js",
     "static/js/787.236d43ef.chunk.js": "/kaginadle/static/js/787.236d43ef.chunk.js",
     "static/media/uparrow.png": "/kaginadle/static/media/uparrow.e37cbc28b65745e20e31.png",
     "static/media/downarrow.png": "/kaginadle/static/media/downarrow.02382106a881363f0951.png",
     "static/media/setting.svg": "/kaginadle/static/media/setting.e3360f42a4c68e2dd87a08a13a63fe8f.svg",
     "index.html": "/kaginadle/index.html",
-    "main.132e3ece.css.map": "/kaginadle/static/css/main.132e3ece.css.map",
-    "main.cdd2c753.js.map": "/kaginadle/static/js/main.cdd2c753.js.map",
+    "main.b0c912e3.css.map": "/kaginadle/static/css/main.b0c912e3.css.map",
+    "main.a21d5c16.js.map": "/kaginadle/static/js/main.a21d5c16.js.map",
     "787.236d43ef.chunk.js.map": "/kaginadle/static/js/787.236d43ef.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.132e3ece.css",
-    "static/js/main.cdd2c753.js"
+    "static/css/main.b0c912e3.css",
+    "static/js/main.a21d5c16.js"
   ]
 }
