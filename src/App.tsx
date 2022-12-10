@@ -451,7 +451,7 @@ function App() {
           You guessed it in {allGuesses.length} tries!
         </div>
       </div>
-      <div style={{ 'fontSize': 60, 'fontWeight': '500', 'color': '#76487a' }} onClick={() => { currentLang === 'jap' ? setCurrentLang('eng') : setCurrentLang('jap') }}>
+      <div style={{ 'cursor': 'default', 'fontSize': 60, 'fontWeight': '500', 'color': '#76487a' }} onClick={() => { currentLang === 'jap' ? setCurrentLang('eng') : setCurrentLang('jap') }}>
         かぎなdle
       </div>
 
@@ -513,7 +513,7 @@ function App() {
                 </div>
                 <div className={`back ${recentGuess?.Name === dailyAnswer.Name ? 'correct' : 'wrong'
                   }`}>
-                  <div>
+                  <div className='text-container'>
                     {currentLang === 'eng'
                       ? recentGuess ? recentGuess.Name : ''
                       : recentGuess ? recentGuess.OriginalName : ''}
@@ -528,7 +528,7 @@ function App() {
                 <div className={`back ${compare(recentGuess, dailyAnswer)[1] === 'same' ? 'correct' :
                   compare(recentGuess, dailyAnswer)[1] === 'different' ? 'wrong' : 'different'
                   }`}>
-                  <div>
+                  <div className='text-container'>
                     {recentGuess ? recentGuess.Height ? recentGuess.Height + 'cm' : 'N/A' : ''}
                   </div>
                   {compare(recentGuess, dailyAnswer)[1] === 'same' || compare(recentGuess, dailyAnswer)[1] === 'different'
@@ -544,7 +544,7 @@ function App() {
                 <div className={`back ${compare(recentGuess, dailyAnswer)[2] === 'same' ? 'correct' :
                   compare(recentGuess, dailyAnswer)[2] === 'different' ? 'wrong' : 'different'
                   }`}>
-                  <div>
+                  <div className='text-container'>
                     {recentGuess
                       ? recentGuess.Weight === null ? 'N/A' : recentGuess.Weight + 'kg'
                       : ''
@@ -563,7 +563,7 @@ function App() {
                 <div className={`back ${compare(recentGuess, dailyAnswer)[3] === 'same' ? 'correct' :
                   compare(recentGuess, dailyAnswer)[3] === 'different' ? 'wrong' : 'different'
                   }`}>
-                  <div>
+                  <div className='text-container'>
                     {recentGuess
                       ? recentGuess.Birthday === 'None/None' ? "N/A" : months[parseInt(recentGuess.Birthday.split('/')[0])] + ' ' + recentGuess.Birthday.split('/')[1]
                       : ''}
@@ -580,7 +580,7 @@ function App() {
                 </div>
                 <div className={`back ${recentGuess?.FASeries === dailyAnswer.FASeries ? 'correct' : 'wrong'
                   }`}>
-                  <div>
+                  <div className='text-container'>
                     {recentGuess ? recentGuess.FASeries : ''}
                   </div>
                 </div>
