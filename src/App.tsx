@@ -47,13 +47,14 @@ function App() {
 
   let d = new Date()
   let k = parseInt(d.getFullYear().toString() + (d.getMonth() + 1).toString().padStart(2, '0') + d.getDate().toString().padStart(2, '0'))
+
   var myRandomFunction = seed(k);
   var randomNumber = myRandomFunction();
   let alltemp = allCharacters
 
 
   const [isNewDay, setIsNewDay] = useState(() => {
-    if (localStorage.getItem('lastDay') !== JSON.stringify(k)) {
+    if (localStorage.getItem('lastDay') && localStorage.getItem('lastDay') !== JSON.stringify(k)) {
       localStorage.setItem('lastDay', JSON.stringify(k))
       return true
     } else {
@@ -143,6 +144,7 @@ function App() {
       }
     })
   }
+
 
   function compare(guess: any, actual: CharacterInfo) {
     let result = []
@@ -296,10 +298,6 @@ function App() {
     }, 800);
   }
 
-  function openMenu() {
-    localStorage.clear()
-    setMenu(!menu)
-  }
   function reset() {
     localStorage.clear()
     window.location.reload()
@@ -315,7 +313,6 @@ function App() {
 
   useEffect(() => {
     if (recentGuess && recentGuess.Name !== 'none') {
-
       setIsInput(false)
       setTimeout(() => {
         window.scrollTo({
