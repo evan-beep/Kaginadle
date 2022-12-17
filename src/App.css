@@ -6,8 +6,9 @@
   justify-content: center;
   display: flex;
   font-family: 'M PLUS Rounded 1c', sans-serif;
-
 }
+
+
 
 .html {
   background: rgb(143, 143, 143);
@@ -394,21 +395,6 @@
   }
 }
 
-@media (orientation: portrait) and (max-width: 600px) {
-  html {
-    /* Rotate the content container */
-    transform: rotate(-90deg);
-    transform-origin: left top;
-    /* Set content width to viewport height */
-    width: 100vh;
-    /* Set content height to viewport width */
-    height: 100vw;
-    overflow-x: hidden;
-    position: absolute;
-    top: 100%;
-    left: 0;
-  }
-}
 
 
 .Animate {

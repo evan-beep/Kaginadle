@@ -436,7 +436,6 @@ function App() {
 
   return (
     <div className="App" style={{ 'margin': 'auto', 'justifyContent': 'center', alignItems: 'center', display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
-
       <div onClick={() => {
         setCompletionScreen(false)
         setMenu(false)

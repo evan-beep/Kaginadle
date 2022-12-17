@@ -9,6 +9,11 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
+    <div className="RotationPrompt">
+      <div className="text">
+        Please rotate your device
+      </div>
+    </div>
     <App />
   </React.StrictMode>
 );
