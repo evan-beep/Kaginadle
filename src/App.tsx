@@ -249,7 +249,7 @@ function App() {
         <div className={`gameBlock Birthday ${compare(prop.props, dailyAnswer)[3] === 'same' ? 'correct' :
           compare(prop.props, dailyAnswer)[3] === 'different' ? 'wrong' : 'different'
           }`}>
-          <TextContainer prop={prop.props.Birthday === 'None/None' ? "N/A" : months[prop.props.Birthday.split('/')[0]] + ' ' + prop.props.Birthday.split('/')[1]} />
+          <TextContainer prop={prop.props.Birthday === 'None/None' ? "N/A" : currentLang === 'jap' ? prop.props.Birthday.split('/')[0] + '月' + prop.props.Birthday.split('/')[1] + '日' : months[prop.props.Birthday.split('/')[0]] + ' ' + prop.props.Birthday.split('/')[1]} />
           {compare(prop.props, dailyAnswer)[3] === 'same' || compare(prop.props, dailyAnswer)[3] === 'different'
             ? <div /> : <img id="bgimg" className='arrowIMG' src={compare(prop.props, dailyAnswer)[3] === 'higher' ? up : compare(prop.props, dailyAnswer)[3] === 'lower' ? down : undefined} alt="" />}
         </div>
@@ -445,7 +445,7 @@ function App() {
       </div>
       <div className={`results ${completionScreen ? 'resultsOpen' : ''}`}>
         <div className='resultsText'>
-          You guessed it in {allGuesses.length} tries!
+          You got it in {allGuesses.length} tries!
         </div>
       </div>
       <div style={{ 'cursor': 'default', 'fontSize': 60, 'fontWeight': '500', 'color': '#76487a' }} onClick={() => { currentLang === 'jap' ? setCurrentLang('eng') : setCurrentLang('jap') }}>
@@ -562,7 +562,7 @@ function App() {
                   }`}>
                   <div className='text-container'>
                     {recentGuess
-                      ? recentGuess.Birthday === 'None/None' ? "N/A" : months[parseInt(recentGuess.Birthday.split('/')[0])] + ' ' + recentGuess.Birthday.split('/')[1]
+                      ? recentGuess.Birthday === 'None/None' ? "N/A" : currentLang === 'jap' ? recentGuess.Birthday.split('/')[0] + '月' + recentGuess.Birthday.split('/')[1] + '日' : months[parseInt(recentGuess.Birthday.split('/')[0])] + ' ' + recentGuess.Birthday.split('/')[1]
                       : ''}
                   </div>
                   {compare(recentGuess, dailyAnswer)[3] === 'same' || compare(recentGuess, dailyAnswer)[3] === 'different'
