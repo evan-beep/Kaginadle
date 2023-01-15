@@ -16,6 +16,7 @@ import rewrite from './data/rewrite.json'
 
 import up from './images/uparrow.png'
 import down from './images/downarrow.png'
+import ReactDOM from 'react-dom';
 
 interface CharacterInfo {
   Name: string,
@@ -207,6 +208,8 @@ function App() {
 
   }
 
+
+
   function seed(s: any) {
     var mask = 0xffffffff;
     var m_w = (123456789 + s) & mask;
@@ -311,6 +314,15 @@ function App() {
     )
   }
 
+  function EnterPressedInSearch(e: any) {
+    var key = e.key;
+    if (key === "Enter") {
+      if (document.getElementsByClassName("searchList")[0].childElementCount === 1) {
+        clickResult({ "props": alltemp.filter(character => SearchFilter(character))[0] });
+
+      }
+    }
+  }
   useEffect(() => {
     if (recentGuess && recentGuess.Name !== 'none') {
       setIsInput(false)
@@ -461,6 +473,7 @@ function App() {
           placeholder={currentLang === 'jap' ? 'キャラ' : 'Character Name'}
           type='text'
           onChange={e => setSearchText(e.target.value)}
+          onKeyDown={e => EnterPressedInSearch(e)}
           disabled={!isInput}
         >
         </input>
